@@ -3,9 +3,7 @@
 import askName from '../src/cli.js';
 import gameBase from '../src/game-base.js';
 
-const random = (min, max) => {
-  return +(Math.random() * (max - min)).toFixed(0);
-};
+const random = (min, max) => +(Math.random() * (max - min)).toFixed(0);
 
 const gameConfig = {
   mainText: 'What is the result of the expression?',

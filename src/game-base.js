@@ -48,11 +48,9 @@ export default function gameBase(options = defaultGame) {
 
   let result = true;
 
-  for (let question of arrayOfQuestions) {
+  for (const question of arrayOfQuestions) {
     console.log(questionGenFunction(question));
-    if (!question) {
-      continue;
-    }
+
     const answer = readLineSync.question(defaultQuestion);
     const correctAnswer = correctAsmwerFunction(question);
     const isCorrect = correctPredicate(correctAnswer, answer);
