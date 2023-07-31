@@ -12,6 +12,6 @@ export default {
   questionGenFunction: ({ numbers, missing }) => `Question: ${numbers.join(' ').replace(missing, '..')}`,
   correctAsmwerFunction: ({ missing }) => missing,
   correctPredicate: (correctAnswer, playerAnswer) => correctAnswer === +playerAnswer,
-  incorrectAnswerFunction: (correctAnswer, playerAnswer) =>
-    `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`,
+  // prettier-ignore
+  incorrectAnswerFunction: (correctAnswer, playerAnswer) => `'${playerAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`,
 };

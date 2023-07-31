@@ -16,8 +16,11 @@ export default function gameBase(options = gameCore) {
 
   let result = true;
 
-  for (const question of arrayOfQuestions) {
+  arrayOfQuestions.forEach((question) => {
     console.log(questionGenFunction(question));
+    if (!question) {
+      return;
+    }
 
     const answer = readLineSync.question(defaultQuestion);
     const correctAnswer = correctAsmwerFunction(question);
@@ -25,9 +28,8 @@ export default function gameBase(options = gameCore) {
     if (!isCorrect) {
       console.log(incorrectAnswerFunction(correctAnswer, answer));
       result = false;
-      break;
     }
-  }
+  });
 
   return result;
 }
