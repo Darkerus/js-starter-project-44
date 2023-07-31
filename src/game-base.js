@@ -18,7 +18,7 @@ export default function gameBase(options = gameCore) {
 
   arrayOfQuestions.forEach((question) => {
     console.log(questionGenFunction(question));
-    if (!question) {
+    if (!question || !result) {
       return;
     }
 
