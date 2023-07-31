@@ -1,6 +1,6 @@
 import gameCore from './core.js';
 
-const random = (min, max) => +(Math.random() * (max - min)).toFixed(0);
+import random from '../helpers/random.js';
 
 export default {
   ...gameCore,
